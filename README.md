@@ -1,2 +1,2 @@
-# diffusion_pytorch
+# stable_diffusion_pytorch
 Diffusion Model Implementation from Scratch
