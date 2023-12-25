@@ -4,6 +4,8 @@
 
 This repository contains a PyTorch implementation of a stable diffusion model from scratch. The diffusion model is a powerful probabilistic generative model that has applications in image synthesis, denoising, and other tasks.
 
+![Stable Diffusion](assets/diffusion.jpg)
+
 ## Features
 
 - **PyTorch Implementation:** The diffusion model is implemented using PyTorch, providing flexibility and ease of use for both training and inference.
@@ -37,29 +39,39 @@ This repository contains a PyTorch implementation of a stable diffusion model fr
 
 3. Download the pre-trained weights
     ```bash
-    wget -O saved_models https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt
+    wget -O saved_models/v1-5-pruned-emaonly.ckpt https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt
     ```
 
 ### Usage
 
-1. Training:
+1. Inference (Text-to-image):
 
     ```bash
-    python train.py --dataset your_dataset --epochs 1000 --lr 0.001
+    python src/inference.py --prompt "photograph of an astronaut riding a horse"
     ```
+    ![Text-to-image](assets/txt-to-img.jpg)
 
-2. Inference:
+2. Inference (Image-to-image):
 
     ```bash
-    python inference.py --prompt="a dog is flying in the sky" --model_path saved_models/model.pth --num_samples 10
+    python src/inference.py --prompt "Put hat on the cat head, ultra-sharp, cinematic, 100mm lens, 8k resolution." --image-path="cat.jpg"
     ```
+    ![Image-to-image](assets/img-to-img.jpg)
 
 ## Structure
 
 - **`src/`**: Contains the source code for the diffusion model implementation.
 - **`data/`**: Placeholder for your dataset or data loading scripts.
 - **`saved_models/`**: Directory to store trained model checkpoints.
-- **`experiments/`**: Logs and other experiment-related files.
+
+## Future Work
+
+- **Implement Training Strategies:** To train diffusion model on custom dataset.
+
+- **Parallelization and Optimization:** Investigate opportunities for parallelizing training and optimizing the code for faster convergence on different hardware configurations.
+
+- **Quantization:** Qauntize the model for faster inference time
+
 
 ## Contributing
 

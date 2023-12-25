@@ -1,5 +1,6 @@
-torch
-numpy
-tqdm
-transformers
-pytorch_lightning
+numpy==1.26.2
+Pillow==10.1.0
+pytorch-lightning==2.1.3
+torch==2.1.2
+tqdm==4.66.1
+transformers==4.36.2

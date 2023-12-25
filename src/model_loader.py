@@ -1,7 +1,7 @@
 from clip import CLIP
 from encoder import VAE_Encoder
 from decoder import VAE_Decoder
-from stable_diffusion_pytorch.diffusion import Diffusion
+from diffusion import Diffusion
 
 import model_converter
 

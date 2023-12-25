@@ -81,11 +81,10 @@ def generate(
         latents_shape = (1, 4, LATENTS_HEIGHT, LATENTS_WIDTH)
 
         if input_image:
-            input_image = input_image.to(device)
             encoder = models["encoder"]
             encoder.to(device)
 
-            input_image_tensor = input_image.resize((WIDTH, HEIGHT)).to(device)
+            input_image_tensor = input_image.resize((WIDTH, HEIGHT))
             # (Height, Width, Channel)
             input_image_tensor = np.array(input_image_tensor)
             # (Height, Width, Channel) -> (Height, Width, Channel)
