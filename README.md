@@ -1,4 +1,4 @@
-# Stable Diffusion Model using PyTorch
+# Prompt2Animate | Stable Diffusion Model using PyTorch
 
 ## Overview
 
@@ -27,8 +27,8 @@ This repository contains a PyTorch implementation of a stable diffusion model fr
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/deepak7376/stable_diffusion_pytorch.git
-    cd stable_diffusion_pytorch
+    git clone https://github.com/deepak7376/Prompt2Animate.git
+    cd Prompt2Animate
     ```
 
 2. Install dependencies:
